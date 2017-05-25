@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Operation
 {
     /// <summary>
-    /// 默认操作类
+    /// 默认操作类   考虑代码量>性能 的因素，暂不屏蔽频繁的拆装箱操作
     /// </summary>
     public class OperatDefault : OrderByBase, IFilterOperation
     {
@@ -79,12 +79,12 @@ namespace Operation
         {
             //将List<ModelBase>转换为List<DefalutModel>
             IList<DefalutModel> listdm = list.Select(x => (DefalutModel)x).ToList();
-            return listdm.OrderBy(x => x.City).ThenBy(x => x.Area).ThenBy(x => x.Zone);
+            listdm = Dictinct(listdm).ToList();
+            return listdm = listdm.OrderBy(x => x.City).ThenBy(x => x.Area).ThenBy(x => x.Zone).ToList();
         }
 
-
         /// <summary>
-        /// 除去城市字段中的多余字符
+        /// 除去城市字段中的多余字符  
         /// </summary>
         /// <param name="str"></param>
         public static DefalutModel RepairCity(DefalutModel dm)
@@ -106,5 +106,60 @@ namespace Operation
             return li;
         }
 
+        /// <summary>
+        /// List<集合>去重操作   弃用
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        //public static IEnumerable<DefalutModel> Dictinct(IList<DefalutModel> list)
+        //{
+        //    for (int i = 0; i < list.Count; i++)
+        //    {
+        //        for (int j = i + 1; j < list.Count; j++)  //如果内层循环是从最后一位 循环  则不会出现序列错误的情况
+        //        {
+        //            if (list[i].No == list[j].No && list[i].Agent == list[j].Agent)
+        //            {
+        //                list.RemoveAt(j);
+        //                j--;
+        //            }
+        //        }
+        //    }
+        //    return list;
+        //}
+
+        public static IEnumerable<DefalutModel> Dictinct(IList<DefalutModel> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                for (int j = list.Count - 1; j > i; j--)  //内层循环使用从后到前的方式，不会出现序列错误的问题
+                {
+                    if (list[i].No == list[j].No && list[i].Agent == list[j].Agent)
+                    {
+                        list.RemoveAt(j);
+                    }
+                }
+            }
+            return list;
+        }
+    }
+
+    public class DefalutModelComparer : IEqualityComparer<DefalutModel>
+    {
+        public bool Equals(DefalutModel x, DefalutModel y)
+        {
+            if (x == null)
+                return y == null;
+            return (x.No == y.No && x.Store == y.Store && x.TradeDate == y.TradeDate && x.TradeType
+                == y.TradeType && x.Zone == y.Zone && x.Agent == y.Agent && x.AgentTel ==
+                y.AgentTel && x.Area == y.Area && x.City == y.City && x.CustomerInDate ==
+                y.CustomerInDate && x.DistributableAchievement == y.DistributableAchievement);
+        }
+
+        public int GetHashCode(DefalutModel obj)
+        {
+            if (obj == null)
+                return 0;
+            return obj.GetHashCode();
+        }
     }
 }

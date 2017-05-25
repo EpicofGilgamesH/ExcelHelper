@@ -11,7 +11,6 @@ E:\学习\ExcelHelper\WriteExcelBase\obj\Debug\WriteExcelBase.dll
 E:\学习\ExcelHelper\WriteExcelBase\obj\Debug\WriteExcelBase.pdb
 E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\bin\Debug\WriteExcelBase.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\bin\Debug\WriteExcelBase.pdb
-E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\bin\Debug\ICSharpCode.SharpZipLib.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\bin\Debug\Model.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\bin\Debug\NPOI.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\bin\Debug\NPOI.OOXML.dll
@@ -24,3 +23,4 @@ E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\obj\Debug\WriteExcelBase.
 E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\obj\Debug\WriteExcelBase.pdb
 E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\bin\Debug\Operation.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\bin\Debug\Operation.pdb
+E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\bin\Debug\ICSharpCode.SharpZipLib.dll

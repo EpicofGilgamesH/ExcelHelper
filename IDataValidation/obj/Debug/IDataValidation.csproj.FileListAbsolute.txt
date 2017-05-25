@@ -5,6 +5,5 @@ E:\学习\ExcelHelper\IDataValidation\obj\Debug\IDataValidation.dll
 E:\学习\ExcelHelper\IDataValidation\obj\Debug\IDataValidation.pdb
 E:\PersonalDemo\ExcelHelper\ExcelHelper\IDataValidation\bin\Debug\IDataValidation.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\IDataValidation\bin\Debug\IDataValidation.pdb
-E:\PersonalDemo\ExcelHelper\ExcelHelper\IDataValidation\obj\Debug\IDataValidation.csprojResolveAssemblyReference.cache
 E:\PersonalDemo\ExcelHelper\ExcelHelper\IDataValidation\obj\Debug\IDataValidation.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\IDataValidation\obj\Debug\IDataValidation.pdb

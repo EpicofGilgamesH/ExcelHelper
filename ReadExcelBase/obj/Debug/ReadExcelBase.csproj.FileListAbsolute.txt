@@ -13,7 +13,6 @@ E:\学习\ExcelHelper\ReadExcelBase\bin\Debug\NPOI.OpenXmlFormats.dll
 E:\学习\ExcelHelper\ReadExcelBase\bin\Debug\NPOI.OpenXml4Net.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ReadExcelBase\bin\Debug\ReadExcelBase.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ReadExcelBase\bin\Debug\ReadExcelBase.pdb
-E:\PersonalDemo\ExcelHelper\ExcelHelper\ReadExcelBase\bin\Debug\ICSharpCode.SharpZipLib.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ReadExcelBase\bin\Debug\Model.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ReadExcelBase\bin\Debug\NPOI.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ReadExcelBase\bin\Debug\NPOI.OOXML.dll
@@ -24,3 +23,4 @@ E:\PersonalDemo\ExcelHelper\ExcelHelper\ReadExcelBase\bin\Debug\NPOI.xml
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ReadExcelBase\obj\Debug\ReadExcelBase.csprojResolveAssemblyReference.cache
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ReadExcelBase\obj\Debug\ReadExcelBase.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ReadExcelBase\obj\Debug\ReadExcelBase.pdb
+E:\PersonalDemo\ExcelHelper\ExcelHelper\ReadExcelBase\bin\Debug\ICSharpCode.SharpZipLib.dll

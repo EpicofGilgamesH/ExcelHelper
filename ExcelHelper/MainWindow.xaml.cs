@@ -64,22 +64,30 @@ namespace ExcelHelper
             string[] colTittle = new string[7] { "城市", "售单", "售佣金", "租单", "租佣金", "总单数", "总佣金" };
             //导入
             WriteExcelBase.WriteExcelBase web = new WriteExcelBase.WriteExcelBase(filePathPort(_filePath), tittle, colTittle);
-            IList<ModelBase> listmb = reb.List;
+            IList<ModelBase> listmb = reb.List.ToList();
             //对集合进行一些列操作
             OperatDefault od = new OperatDefault();
-            //筛选
-            IEnumerable<ModelBase> mb = CheckBox.IsChecked == true ? od.FilterByMonth(listmb.ToList(), false) : od.FilterByMonth(listmb.ToList());
-            //排除
-            mb = od.FilterByColumn(mb.ToList());
-            //修复
-            mb = od.RepairByColumn(mb.ToList());
-            //排序
-            mb = od.OrederOperation(mb.ToList());
-            //导出
-            int i = web.ListToExcel(mb.ToList());
-            picture.Source = new BitmapImage(new Uri("/images/tuanzi2.jpg", UriKind.Relative));
-            msg.Content = i == -1 ? string.Format("导出失败，请检查Excel格式") : string.Format("导出成功，共数据：{0}条", i);
-            msg.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));
+           
+            try
+            {
+                //筛选
+                IEnumerable<ModelBase> mb = CheckBox.IsChecked == true ? od.FilterByMonth(listmb.ToList(), false) : od.FilterByMonth(listmb.ToList());
+                //排除
+                mb = od.FilterByColumn(mb.ToList());
+                //修复
+                mb = od.RepairByColumn(mb.ToList());
+                //排序
+                mb = od.OrederOperation(mb.ToList());
+                //导出
+                int i = web.ListToExcel(mb.ToList());
+                picture.Source = new BitmapImage(new Uri("/images/tuanzi2.jpg", UriKind.Relative));
+                msg.Content = i == -1 ? string.Format("导出失败，请检查Excel格式") : string.Format("导出成功，共数据：{0}条", i);
+                msg.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));
+            }
+            catch
+            {
+                msg.Content = "不包含所选月份的数据 或 Excel正在工作~";
+            }
         }
 
         protected static string filePathPort(string str)

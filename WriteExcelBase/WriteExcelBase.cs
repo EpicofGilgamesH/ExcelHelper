@@ -136,7 +136,7 @@ namespace WriteExcelBase
             row.CreateCell(6).SetCellValue(TradeTypeToString(dm.TradeType));
             row.CreateCell(7).SetCellValue(dm.DistributableAchievement);
             ICell dateCell = row.CreateCell(8);
-            dateCell.SetCellValue(dm.TradeDate.ToShortDateString());
+            dateCell.SetCellValue(dm.TradeDate.ToString("yyyy-MM-dd"));
             //dateCell.SetCellValue(dm.TradeDate.ToString("yyyy-MM-dd")); 时间格式不便于筛选
             //dateCell.CellStyle = style;
             row.CreateCell(9).SetCellValue(dm.No);
