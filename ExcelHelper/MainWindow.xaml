@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="ExcelHelperForLizzy" Height="417.046" Width="409.762">
     <Grid Name="x" Background="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}">
-        <Label x:Name="lable" Content="WeeklyStatistics   输出地址：Desktop" HorizontalAlignment="Left" Margin="55,49,0,0" VerticalAlignment="Top" Width="274" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" Cursor="Arrow" IsHitTestVisible="False" FontSize="14" FontWeight="Bold" FontStretch="Condensed" Background="#FFEAEDF5" Height="35"/>
+        <Label x:Name="lable" Content="WeeklyStatistics   SaveAddress：Desktop" HorizontalAlignment="Left" Margin="44,49,0,0" VerticalAlignment="Top" Width="314" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" Cursor="Arrow" IsHitTestVisible="False" FontSize="14" FontWeight="Bold" FontStretch="Condensed" Background="#FFEAEDF5" Height="35"/>
         <Button x:Name="button" Content="Choice" HorizontalAlignment="Stretch" Margin="55,286,263,58" VerticalAlignment="Stretch" Click="Choice_Click" FontWeight="Bold" FontSize="16">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
@@ -31,7 +31,7 @@
         </Button>
         <Label Name="epic" Content="© EpicofGilgamesH  ExcelHelperV1.0.1.8" HorizontalAlignment="Left" Margin="128,356,0,-1" VerticalAlignment="Top" Width="241" Height="31"/>
         <Image Name="picture" HorizontalAlignment="Left" Height="146" Margin="116,135,0,0" VerticalAlignment="Top" Width="150"/>
-        <Label Name="msg" Content="Welcome to user~" HorizontalAlignment="Left" Margin="55,104,0,0" VerticalAlignment="Top" Width="274" FontFamily="Microsoft NeoGothic" FontStyle="Italic" HorizontalContentAlignment="Center" Background="#FFF3EDEC"/>
+        <Label Name="msg" Content="Welcome to use~" HorizontalAlignment="Left" Margin="62,104,0,0" VerticalAlignment="Top" Width="274" FontFamily="Microsoft NeoGothic" FontStyle="Italic" HorizontalContentAlignment="Center" Background="#FFF3EDEC"/>
         <CheckBox Name="CheckBox" Content="LastMonth" HorizontalAlignment="Left" Margin="142,301,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
     </Grid>
 </Window>

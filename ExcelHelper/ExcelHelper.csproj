@@ -19,7 +19,7 @@
     <PublishUrl>F:\Publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
@@ -27,7 +27,8 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/ExcelHelper/</UpdateUrl>
-    <ApplicationRevision>17</ApplicationRevision>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>18</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -188,6 +189,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\ExcelHelper.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tuanzi1.jpg" />
+    <Resource Include="images\tuanzi10.jpg" />
+    <Resource Include="images\tuanzi3.jpg" />
+    <Resource Include="images\tuanzi4.jpg" />
+    <Resource Include="images\tuanzi5.jpg" />
+    <Resource Include="images\tuanzi6.jpg" />
+    <Resource Include="images\tuanzi7.jpg" />
+    <Resource Include="images\tuanzi8.jpg" />
+    <Resource Include="images\tuanzi9.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

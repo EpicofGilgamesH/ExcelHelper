@@ -67,7 +67,7 @@ namespace ExcelHelper
             IList<ModelBase> listmb = reb.List.ToList();
             //对集合进行一些列操作
             OperatDefault od = new OperatDefault();
-           
+
             try
             {
                 //筛选
@@ -80,7 +80,7 @@ namespace ExcelHelper
                 mb = od.OrederOperation(mb.ToList());
                 //导出
                 int i = web.ListToExcel(mb.ToList());
-                picture.Source = new BitmapImage(new Uri("/images/tuanzi2.jpg", UriKind.Relative));
+                picture.Source = new BitmapImage(new Uri(GetRandomImagPath(), UriKind.Relative));
                 msg.Content = i == -1 ? string.Format("导出失败，请检查Excel格式") : string.Format("导出成功，共数据：{0}条", i);
                 msg.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));
             }
@@ -104,5 +104,13 @@ namespace ExcelHelper
         {
 
         }
+
+        private string GetRandomImagPath()
+        {
+            Random r = new Random();
+            int i = r.Next(1, 10);
+            return string.Format("/images/tuanzi{0}.jpg", i);
+        }
+
     }
 }
