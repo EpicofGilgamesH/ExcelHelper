@@ -28,7 +28,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/ExcelHelper/</UpdateUrl>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationRevision>22</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -147,24 +147,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{cbdb591a-82ca-4149-a9be-5ba4084923dc}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Operation\Operation.csproj">
-      <Project>{0db8ec08-6e83-4970-88c3-f5c24d61009a}</Project>
-      <Name>Operation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ReadExcelBase\ReadExcelBase.csproj">
-      <Project>{bfad8b5e-f79e-4403-a65e-fb5994bcef27}</Project>
-      <Name>ReadExcelBase</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WriteExcelBase\WriteExcelBase.csproj">
-      <Project>{bbdb37d2-efaf-417a-ae13-89cfd6633b76}</Project>
-      <Name>WriteExcelBase</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\tuanzi2.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +182,24 @@
     <Resource Include="images\tuanzi7.jpg" />
     <Resource Include="images\tuanzi8.jpg" />
     <Resource Include="images\tuanzi9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{cbdb591a-82ca-4149-a9be-5ba4084923dc}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Operation\Operation.csproj">
+      <Project>{0db8ec08-6e83-4970-88c3-f5c24d61009a}</Project>
+      <Name>Operation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReadExcelBase\ReadExcelBase.csproj">
+      <Project>{bfad8b5e-f79e-4403-a65e-fb5994bcef27}</Project>
+      <Name>ReadExcelBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WriteExcelBase\WriteExcelBase.csproj">
+      <Project>{bbdb37d2-efaf-417a-ae13-89cfd6633b76}</Project>
+      <Name>WriteExcelBase</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

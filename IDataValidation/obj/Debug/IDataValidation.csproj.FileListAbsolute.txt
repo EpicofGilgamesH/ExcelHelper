@@ -7,4 +7,3 @@ E:\PersonalDemo\ExcelHelper\ExcelHelper\IDataValidation\bin\Debug\IDataValidatio
 E:\PersonalDemo\ExcelHelper\ExcelHelper\IDataValidation\bin\Debug\IDataValidation.pdb
 E:\PersonalDemo\ExcelHelper\ExcelHelper\IDataValidation\obj\Debug\IDataValidation.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\IDataValidation\obj\Debug\IDataValidation.pdb
-E:\PersonalDemo\ExcelHelper\ExcelHelper\IDataValidation\obj\Debug\IDataValidation.csprojResolveAssemblyReference.cache

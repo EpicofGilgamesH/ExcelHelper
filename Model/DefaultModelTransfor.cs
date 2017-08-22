@@ -56,5 +56,12 @@ namespace Model
         /// 可分配业绩
         /// </summary>
         public double DistributableAchievement { get; set; }
+
+
+        //2.0新增导出字段
+        /// <summary>
+        /// 预约精准匹配
+        /// </summary>
+        public string IsOrderRight { get; set; }
     }
 }

@@ -9,6 +9,7 @@ E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\bin\Debug\ReadExcelBase.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\bin\Debug\WriteExcelBase.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\bin\Debug\NPOI.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\bin\Debug\NPOI.OOXML.dll
+E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\bin\Debug\ICSharpCode.SharpZipLib.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\bin\Debug\NPOI.OpenXmlFormats.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\bin\Debug\NPOI.OpenXml4Net.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\bin\Debug\Model.pdb
@@ -30,4 +31,3 @@ E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\obj\Debug\ExcelHelper.exe.ma
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\obj\Debug\ExcelHelper.application
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\obj\Debug\ExcelHelper.exe
 E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\obj\Debug\ExcelHelper.pdb
-E:\PersonalDemo\ExcelHelper\ExcelHelper\ExcelHelper\bin\Debug\ICSharpCode.SharpZipLib.dll

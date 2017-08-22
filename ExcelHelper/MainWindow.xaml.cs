@@ -60,33 +60,41 @@ namespace ExcelHelper
                 msg.Content = "文件格式不对，请联系管理员~ ^^" + ex;
             }
             //IList<DefalutModel> list = reb.List as IList<DefalutModel>;
-            string[] tittle = new string[10] { "城市", "区域", "片区", "店铺", "经纪人", "经纪人号码", "成交类型", "总佣金", "成交时间", "交易编号" };
+            string[] tittle = new string[11] { "城市", "区域", "片区", "店铺", "经纪人", "经纪人号码", "成交类型", "总佣金", "成交时间", "交易编号", "进线精准匹配" };
             string[] colTittle = new string[7] { "城市", "售单", "售佣金", "租单", "租佣金", "总单数", "总佣金" };
             //导入
-            WriteExcelBase.WriteExcelBase web = new WriteExcelBase.WriteExcelBase(filePathPort(_filePath), tittle, colTittle);
-            IList<ModelBase> listmb = reb.List.ToList();
-            //对集合进行一些列操作
-            OperatDefault od = new OperatDefault();
-
             try
             {
-                //筛选
-                IEnumerable<ModelBase> mb = CheckBox.IsChecked == true ? od.FilterByMonth(listmb.ToList(), false) : od.FilterByMonth(listmb.ToList());
-                //排除
-                mb = od.FilterByColumn(mb.ToList());
-                //修复
-                mb = od.RepairByColumn(mb.ToList());
-                //排序
-                mb = od.OrederOperation(mb.ToList());
-                //导出
-                int i = web.ListToExcel(mb.ToList());
-                picture.Source = new BitmapImage(new Uri(GetRandomImagPath(), UriKind.Relative));
-                msg.Content = i == -1 ? string.Format("导出失败，请检查Excel格式") : string.Format("导出成功，共数据：{0}条", i);
-                msg.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));
+                WriteExcelBase.WriteExcelBase web = new WriteExcelBase.WriteExcelBase(filePathPort(_filePath), tittle, colTittle);
+                IList<ModelBase> listmb = reb.List.ToList();
+
+                //对集合进行一些列操作
+                OperatDefault od = new OperatDefault();
+
+                try
+                {
+                    //筛选
+                    IEnumerable<ModelBase> mb = CheckBox.IsChecked == true ? od.FilterByMonth(listmb.ToList(), false) : od.FilterByMonth(listmb.ToList());
+                    //排除
+                    mb = od.FilterByColumn(mb.ToList());
+                    //修复
+                    mb = od.RepairByColumn(mb.ToList());
+                    //排序
+                    mb = od.OrederOperation(mb.ToList());
+                    //导出
+                    int i = web.ListToExcel(mb.ToList());
+                    picture.Source = new BitmapImage(new Uri(GetRandomImagPath(), UriKind.Relative));
+                    msg.Content = i == -1 ? string.Format("导出失败，请检查Excel格式") : string.Format("导出成功，共数据：{0}条", i);
+                    msg.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));
+                }
+                catch
+                {
+                    msg.Content = "不包含所选月份的数据 或 Excel正在工作~";
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                msg.Content = "不包含所选月份的数据 或 Excel正在工作~";
+                msg.Content = "文件数据为空，请检查月份是否对应~ ^^" + ex;
             }
         }
 

@@ -140,6 +140,7 @@ namespace WriteExcelBase
             //dateCell.SetCellValue(dm.TradeDate.ToString("yyyy-MM-dd")); 时间格式不便于筛选
             //dateCell.CellStyle = style;
             row.CreateCell(9).SetCellValue(dm.No);
+            row.CreateCell(10).SetCellValue(dm.IsCoilInTimeRight);
             return row;
         }
 

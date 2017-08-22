@@ -45,8 +45,10 @@
     <Compile Include="Colloge.cs" />
     <Compile Include="DefalutModel.cs" />
     <Compile Include="DefaultModelTransfor.cs" />
+    <Compile Include="EnumHelper.cs" />
     <Compile Include="ModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TittleEnum.cs" />
     <Compile Include="TradeTypeEnum.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

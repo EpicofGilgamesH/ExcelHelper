@@ -9,10 +9,14 @@ namespace Model
     //default 默认的excel表字段
     public class DefalutModel : ModelBase
     {
-        //交易编号
+        /// <summary>
+        /// 交易编号
+        /// </summary>
         public string No { get; set; }
 
-        //成交日期
+        /// <summary>
+        /// 成交日期
+        /// </summary>
         public DateTime TradeDate { get; set; }
 
         /// <summary>
@@ -28,7 +32,7 @@ namespace Model
         /// <summary>
         /// 经纪人号码
         /// </summary>
-        public double AgentTel { get; set; }
+        public string AgentTel { get; set; }
 
         /// <summary>
         /// 店铺
@@ -59,5 +63,31 @@ namespace Model
         /// 城市
         /// </summary>
         public string City { get; set; }
+
+        //2.0新增字段
+        /// <summary>
+        /// 进线精准匹配
+        /// </summary>
+        public string IsCoilInTimeRight { get; set; }
+
+        /// <summary>
+        /// 预约时间
+        /// </summary>
+        public DateTime OrderTime { get; set; }
+
+        /// <summary>
+        /// 预约精准匹配
+        /// </summary>
+        public string IsOrderTimeRight { get; set; }
+
+        /// <summary>
+        /// Q聊时间
+        /// </summary>
+        public DateTime QQTalkTime { get; set; }
+
+        /// <summary>
+        /// Q聊时间精确匹配
+        /// </summary>
+        public string IsQQTalkTimeRight { get; set; }
     }
 }

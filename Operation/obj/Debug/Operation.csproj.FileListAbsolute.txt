@@ -2,6 +2,6 @@ E:\PersonalDemo\ExcelHelper\ExcelHelper\Operation\bin\Debug\Operation.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\Operation\bin\Debug\Operation.pdb
 E:\PersonalDemo\ExcelHelper\ExcelHelper\Operation\bin\Debug\Model.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\Operation\bin\Debug\Model.pdb
+E:\PersonalDemo\ExcelHelper\ExcelHelper\Operation\obj\Debug\Operation.csprojResolveAssemblyReference.cache
 E:\PersonalDemo\ExcelHelper\ExcelHelper\Operation\obj\Debug\Operation.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\Operation\obj\Debug\Operation.pdb
-E:\PersonalDemo\ExcelHelper\ExcelHelper\Operation\obj\Debug\Operation.csprojResolveAssemblyReference.cache

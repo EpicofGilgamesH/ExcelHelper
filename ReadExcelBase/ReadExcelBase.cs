@@ -19,7 +19,7 @@ namespace ReadExcelBase
         }
         private string _filePath = string.Empty;
         private IWorkbook _workbook = null;
-        public string[] Tittle { get; set; }
+        public static string[] Tittle { get; set; }
         public string[] SheetName { get; set; }
         public IList<ModelBase> List { get; set; }
 
@@ -95,20 +95,47 @@ namespace ReadExcelBase
 
         public static DefalutModel FillDefalutModel(IRow row)
         {
+            DateTime defalutDate = default(DateTime);
             DefalutModel dm = new DefalutModel();
-            dm.No = row.GetCell(0).StringCellValue;
-            dm.TradeDate = row.GetCell(1).DateCellValue;
-            dm.TradeType = IsRentOrSale(row.GetCell(2).StringCellValue);
-            dm.Agent = row.GetCell(3).StringCellValue;
-            dm.AgentTel = GetDistributableAchievement(row.GetCell(4));
-            dm.Store = row.GetCell(5).StringCellValue;
-            dm.Zone = row.GetCell(6).StringCellValue;
-            dm.Area = row.GetCell(7).StringCellValue;
-            dm.DistributableAchievement = GetDistributableAchievement(row.GetCell(8));
-            dm.CustomerInDate = row.GetCell(9).DateCellValue;
-            dm.City = row.GetCell(10).StringCellValue;
+            //dm.No = row.GetCell(0).StringCellValue;
+            //dm.TradeDate = row.GetCell(1).DateCellValue;
+            //dm.TradeType = IsRentOrSale(row.GetCell(2).StringCellValue);
+            //dm.Agent = row.GetCell(3).StringCellValue;
+            //dm.AgentTel = GetDistributableAchievement(row.GetCell(4));
+            //dm.Store = row.GetCell(5).StringCellValue;
+            //dm.Zone = row.GetCell(6).StringCellValue;
+            //dm.Area = row.GetCell(7).StringCellValue;
+            //dm.DistributableAchievement = GetDistributableAchievement(row.GetCell(8));
+            //dm.CustomerInDate = row.GetCell(9).DateCellValue;
+            //dm.City = row.GetCell(10).StringCellValue;
+
+            //采用标题识别的方式
+            Dictionary<TittleEnum, int> sortDic = GetSortDictionary();
+            dm.No = row.GetCell(sortDic[TittleEnum.No]).StringCellValue;
+            string tradeDate = row.GetCell(sortDic[TittleEnum.TradeDate]).StringCellValue;
+            dm.TradeDate = tradeDate != "null" ? DateTime.ParseExact(tradeDate, "yyyyMMddHHmmss", null) : defalutDate;
+            dm.TradeType = IsRentOrSale(row.GetCell(sortDic[TittleEnum.TradeType]).StringCellValue);
+            dm.Agent = row.GetCell(sortDic[TittleEnum.Agent]).StringCellValue;
+            //dm.AgentTel = GetDistributableAchievement(row.GetCell(sortDic[TittleEnum.AgentTel]));
+            dm.AgentTel = row.GetCell(sortDic[TittleEnum.AgentTel]).StringCellValue;
+            dm.Store = row.GetCell(sortDic[TittleEnum.Store]).StringCellValue;
+            dm.Zone = row.GetCell(sortDic[TittleEnum.Zone]).StringCellValue;
+            dm.Area = row.GetCell(sortDic[TittleEnum.Area]).StringCellValue;
+            dm.DistributableAchievement = GetDistributableAchievement(row.GetCell(sortDic[TittleEnum.DistributableAchievement]));
+            string customerInDate = row.GetCell(sortDic[TittleEnum.CustomerInDate]).StringCellValue;
+            dm.CustomerInDate = customerInDate != "null" ? DateTime.ParseExact(customerInDate, "yyyyMMddHHmmss", null) : defalutDate;
+            dm.City = row.GetCell(sortDic[TittleEnum.City]).StringCellValue;
+            //2.0新增字段
+            dm.IsCoilInTimeRight = row.GetCell(sortDic[TittleEnum.IsCoilInTimeRight]).StringCellValue;
+            string orderTime = row.GetCell(sortDic[TittleEnum.OrderTime]).StringCellValue;
+            dm.OrderTime = orderTime != "null" ? DateTime.ParseExact(orderTime, "yyyyMMddHHmmss", null) : defalutDate;
+            dm.IsOrderTimeRight = row.GetCell(sortDic[TittleEnum.IsOrderTimeRight]).StringCellValue;
+            string qqTalkTime = row.GetCell(sortDic[TittleEnum.QQTalkTime]).StringCellValue;
+            dm.QQTalkTime = qqTalkTime != "null" ? DateTime.ParseExact(qqTalkTime, "yyyyMMddHHmmss", null) : defalutDate;
+            dm.IsQQTalkTimeRight = row.GetCell(sortDic[TittleEnum.IsQQTalkTimeRight]).StringCellValue;
             return dm;
         }
+
 
         /// <summary>
         /// 可分配业绩兼容文本类型和值类型的方法   [这个try catch 不可取，花的时间太长了]
@@ -152,6 +179,31 @@ namespace ReadExcelBase
                 throw new Exception("成交类型出错，请检查~");
             }
             return tte;
+        }
+
+
+        /// <summary>
+        /// 根据列名获取列的序列号
+        /// </summary>
+        /// <param name="columnName"></param>
+        /// <returns></returns>
+        public static Dictionary<TittleEnum, int> GetSortDictionary()
+        {
+            Dictionary<TittleEnum, int> sortDic = new Dictionary<TittleEnum, int>();
+            foreach (TittleEnum item in Enum.GetValues(typeof(TittleEnum)))
+            {
+                string columnName = EnumHelper.GetEnumDescription(item);
+                int i = 0;
+                foreach (var it in Tittle)
+                {
+                    if (it.Trim() == columnName.Trim())
+                    {
+                        sortDic.Add(item, i);
+                    }
+                    i++;
+                }
+            }
+            return sortDic;
         }
     }
 }

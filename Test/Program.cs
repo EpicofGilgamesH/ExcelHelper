@@ -32,10 +32,14 @@ namespace Test
             //int i = web.ListToExcel(mb.ToList());
 
 
-            DateTime dt1 = new DateTime(2016, 12, 6);
-            DateTime dt2 = new DateTime(2017, 1, 6);
-           
-            int j = dt1.Month;
+            //DateTime dt1 = new DateTime(2016, 12, 6);
+            //DateTime dt2 = new DateTime(2017, 1, 6);
+
+            //int j = dt1.Month;
+
+
+            string date = "20170108165649";
+            DateTime dt = DateTime.ParseExact(date, "yyyyMMddHHmmss", null);
         }
     }
 }
