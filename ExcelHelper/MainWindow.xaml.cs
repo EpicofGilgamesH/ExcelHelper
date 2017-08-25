@@ -2,6 +2,7 @@
 using Operation;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -48,6 +49,8 @@ namespace ExcelHelper
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
             //picture.Source = new BitmapImage(new Uri("/images/tuanzi1.gif", UriKind.Relative));
             //string sheetName = "透视结果一";
             ReadExcelBase.ReadExcelBase reb = new ReadExcelBase.ReadExcelBase(_filePath);
@@ -83,8 +86,9 @@ namespace ExcelHelper
                     mb = od.OrederOperation(mb.ToList());
                     //导出
                     int i = web.ListToExcel(mb.ToList());
+                    sw.Stop();
                     picture.Source = new BitmapImage(new Uri(GetRandomImagPath(), UriKind.Relative));
-                    msg.Content = i == -1 ? string.Format("导出失败，请检查Excel格式") : string.Format("导出成功，共数据：{0}条", i);
+                    msg.Content = i == -1 ? string.Format("导出失败，请检查Excel格式") : string.Format("导出成功，共数据：{0}条,共耗时{1}ms", i, sw.ElapsedMilliseconds);
                     msg.Foreground = new SolidColorBrush(Color.FromArgb(255, 255, 0, 0));
                 }
                 catch
@@ -96,6 +100,8 @@ namespace ExcelHelper
             {
                 msg.Content = "文件数据为空，请检查月份是否对应~ ^^" + ex;
             }
+
+
         }
 
         protected static string filePathPort(string str)

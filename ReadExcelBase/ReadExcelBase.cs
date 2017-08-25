@@ -95,7 +95,6 @@ namespace ReadExcelBase
 
         public static DefalutModel FillDefalutModel(IRow row)
         {
-            DateTime defalutDate = default(DateTime);
             DefalutModel dm = new DefalutModel();
             //dm.No = row.GetCell(0).StringCellValue;
             //dm.TradeDate = row.GetCell(1).DateCellValue;
@@ -113,7 +112,10 @@ namespace ReadExcelBase
             Dictionary<TittleEnum, int> sortDic = GetSortDictionary();
             dm.No = row.GetCell(sortDic[TittleEnum.No]).StringCellValue;
             string tradeDate = row.GetCell(sortDic[TittleEnum.TradeDate]).StringCellValue;
-            dm.TradeDate = tradeDate != "null" ? DateTime.ParseExact(tradeDate, "yyyyMMddHHmmss", null) : defalutDate;
+            //dm.TradeDate = tradeDate != "null" ? DateTime.ParseExact(tradeDate, "yyyyMMddHHmmss", null) : defalutDate;
+            //dm.TradeDate = tradeDate != "null" ? Convert.ToDateTime(tradeDate) : defalutDate;
+            //dm.TradeDate = tradeDate == "null" ? defalutDate : (DateTime.TryParse(tradeDate, out defalutDate) ? defalutDate : defalutDate);
+            dm.TradeDate = TransforStirngToDateTime(tradeDate);
             dm.TradeType = IsRentOrSale(row.GetCell(sortDic[TittleEnum.TradeType]).StringCellValue);
             dm.Agent = row.GetCell(sortDic[TittleEnum.Agent]).StringCellValue;
             //dm.AgentTel = GetDistributableAchievement(row.GetCell(sortDic[TittleEnum.AgentTel]));
@@ -123,15 +125,18 @@ namespace ReadExcelBase
             dm.Area = row.GetCell(sortDic[TittleEnum.Area]).StringCellValue;
             dm.DistributableAchievement = GetDistributableAchievement(row.GetCell(sortDic[TittleEnum.DistributableAchievement]));
             string customerInDate = row.GetCell(sortDic[TittleEnum.CustomerInDate]).StringCellValue;
-            dm.CustomerInDate = customerInDate != "null" ? DateTime.ParseExact(customerInDate, "yyyyMMddHHmmss", null) : defalutDate;
+            //dm.CustomerInDate = customerInDate != "null" ? DateTime.ParseExact(customerInDate, "yyyyMMddHHmmss", null) : defalutDate;
+            dm.CustomerInDate = TransforStirngToDateTime(customerInDate);
             dm.City = row.GetCell(sortDic[TittleEnum.City]).StringCellValue;
             //2.0新增字段
             dm.IsCoilInTimeRight = row.GetCell(sortDic[TittleEnum.IsCoilInTimeRight]).StringCellValue;
             string orderTime = row.GetCell(sortDic[TittleEnum.OrderTime]).StringCellValue;
-            dm.OrderTime = orderTime != "null" ? DateTime.ParseExact(orderTime, "yyyyMMddHHmmss", null) : defalutDate;
+            //dm.OrderTime = orderTime != "null" ? DateTime.ParseExact(orderTime, "yyyyMMddHHmmss", null) : defalutDate;
+            dm.OrderTime = TransforStirngToDateTime(orderTime);
             dm.IsOrderTimeRight = row.GetCell(sortDic[TittleEnum.IsOrderTimeRight]).StringCellValue;
             string qqTalkTime = row.GetCell(sortDic[TittleEnum.QQTalkTime]).StringCellValue;
-            dm.QQTalkTime = qqTalkTime != "null" ? DateTime.ParseExact(qqTalkTime, "yyyyMMddHHmmss", null) : defalutDate;
+            //dm.QQTalkTime = qqTalkTime != "null" ? DateTime.ParseExact(qqTalkTime, "yyyyMMddHHmmss", null) : defalutDate;
+            dm.QQTalkTime = TransforStirngToDateTime(qqTalkTime);
             dm.IsQQTalkTimeRight = row.GetCell(sortDic[TittleEnum.IsQQTalkTimeRight]).StringCellValue;
             return dm;
         }
@@ -204,6 +209,29 @@ namespace ReadExcelBase
                 }
             }
             return sortDic;
+        }
+
+
+        /// <summary>
+        /// 根据不同格式的stirng转换成时间格式
+        /// </summary>
+        /// <param name="str">时间的字符串形势</param>
+        /// <returns>DateTime对象</returns>
+        public static DateTime TransforStirngToDateTime(string str)
+        {
+            DateTime defaultDate = DateTime.MinValue;
+            if (str == "null" || string.IsNullOrEmpty(str))
+            {
+                return defaultDate;
+            }
+            if (DateTime.TryParse(str, out defaultDate))
+            {
+                return defaultDate;
+            }
+            else
+            {
+                return DateTime.ParseExact(str, "yyyyMMddHHmmss", null);
+            }
         }
     }
 }

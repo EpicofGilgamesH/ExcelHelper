@@ -19,7 +19,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="submit" Content="Confirm" HorizontalAlignment="Stretch" Margin="222,286,78,58" VerticalAlignment="Stretch" Click="Add_Click" FontWeight="Bold" FontSize="16">
+        <Button x:Name="submit" Content="Confirm" HorizontalAlignment="Stretch" Margin="225,286,75,58" VerticalAlignment="Stretch" Click="Add_Click" FontWeight="Bold" FontSize="16">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -29,7 +29,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label Name="epic" Content="© EpicofGilgamesH  ExcelHelperV2.0.0.0" HorizontalAlignment="Left" Margin="128,356,0,-1" VerticalAlignment="Top" Width="241" Height="31"/>
+        <Label Name="epic" Content="© EpicofGilgamesH  ExcelHelperV2.0.1.1" HorizontalAlignment="Left" Margin="128,356,0,-1" VerticalAlignment="Top" Width="241" Height="31"/>
         <Image Name="picture" HorizontalAlignment="Left" Height="146" Margin="116,135,0,0" VerticalAlignment="Top" Width="150"/>
         <Label Name="msg" Content="Welcome to use~" HorizontalAlignment="Left" Margin="62,104,0,0" VerticalAlignment="Top" Width="274" FontFamily="Microsoft NeoGothic" FontStyle="Italic" HorizontalContentAlignment="Center" Background="#FFF3EDEC"/>
         <CheckBox Name="CheckBox" Content="LastMonth" HorizontalAlignment="Left" Margin="142,301,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>

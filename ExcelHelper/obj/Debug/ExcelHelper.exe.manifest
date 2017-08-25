@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="ExcelHelper.exe" version="1.0.0.21" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="ExcelHelper.exe" version="1.0.0.23" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="ExcelHelper.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QYhe2sqj3RgR710Pl0Qm0YwS7ppCYkccNkvzvQFZXKw=</dsig:DigestValue>
+        <dsig:DigestValue>ZBBTtKmtc5jsjyOaPuS9hbYf+dfh+0QQr8UH2wXhjCs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hc3DEzBdSBsnjxCpIuo0qOdp7Gqctplj0H7yipb0uSM=</dsig:DigestValue>
+        <dsig:DigestValue>I1c6XnUbgnpvqMfMR7XRCIqh8qrvaAX3/xcBEGeU1gs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -134,19 +134,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v8t1sKqXpK+xNbU/G3VCDMlLfmpzxBFxpUia4JuYwZg=</dsig:DigestValue>
+        <dsig:DigestValue>ON8tCaVuqH0VYO6wmB3KVZ/1m5LBcQ+/x7UdJBJRP84=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReadExcelBase.dll" size="8704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReadExcelBase.dll" size="9216">
       <assemblyIdentity name="ReadExcelBase" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cabi15C/k7cZT5JQ1LEklm38nXQTbwqh9QBjUtIZPIw=</dsig:DigestValue>
+        <dsig:DigestValue>9A/FLPt4X0Pvf1VfoyyfQX1b8E4hmp910j6DhIGQ8Fg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -158,7 +158,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NI0W6QZhW8PRTcpoTM7BQkhVUAebMu441ibs3REblSo=</dsig:DigestValue>
+        <dsig:DigestValue>gfFQYdVeQjzbYO8syNLSMwGdfx3x3VKTeVIuwLaUv2o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
