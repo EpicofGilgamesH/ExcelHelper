@@ -7,3 +7,4 @@ E:\PersonalDemo\ExcelHelper\ExcelHelper\Model\bin\Debug\Model.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\Model\bin\Debug\Model.pdb
 E:\PersonalDemo\ExcelHelper\ExcelHelper\Model\obj\Debug\Model.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\Model\obj\Debug\Model.pdb
+E:\PersonalDemo\ExcelHelper\ExcelHelper\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
