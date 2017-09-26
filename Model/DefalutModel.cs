@@ -89,5 +89,17 @@ namespace Model
         /// Q聊时间精确匹配
         /// </summary>
         public string IsQQTalkTimeRight { get; set; }
+
+        //3.0增加文本描述字段
+        /// <summary>
+        /// 成交方式
+        /// </summary>
+        public string ClosingMehtod { get; set; }
+
+        /// <summary>
+        /// 文本描述
+        /// </summary>
+        public string Description { get; set; }
+
     }
 }

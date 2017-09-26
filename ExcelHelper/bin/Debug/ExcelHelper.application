@@ -9,14 +9,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ExcelHelper.exe.manifest" size="11137">
+    <dependentAssembly dependencyType="install" codebase="ExcelHelper.exe.manifest" size="11138">
       <assemblyIdentity name="ExcelHelper.exe" version="1.0.0.25" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CM4mS1umx9W001BksqjXdYoukDM2tnpEv7S78Zso+Do=</dsig:DigestValue>
+        <dsig:DigestValue>NHQ9/mp3Z6nffcCpr1scZxNGNcbL2+O2/yn3y6fr/Co=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -63,7 +63,7 @@ namespace ExcelHelper
                 msg.Content = "文件格式不对，请联系管理员~ ^^" + ex;
             }
             //IList<DefalutModel> list = reb.List as IList<DefalutModel>;
-            string[] tittle = new string[11] { "城市", "区域", "片区", "店铺", "经纪人", "经纪人号码", "成交类型", "总佣金", "成交时间", "交易编号", "进线精准匹配" };
+            string[] tittle = new string[13] { "城市", "区域", "片区", "店铺", "经纪人", "经纪人号码", "成交类型", "总佣金", "成交时间", "交易编号", "进线精准匹配", "客户来源", "文本" };
             string[] colTittle = new string[7] { "城市", "售单", "售佣金", "租单", "租佣金", "总单数", "总佣金" };
             //导入
             try
@@ -82,6 +82,7 @@ namespace ExcelHelper
                     mb = od.FilterByColumn(mb.ToList());
                     //修复
                     mb = od.RepairByColumn(mb.ToList());
+                    mb=od.GetExactCity(mb.ToList());
                     //排序
                     mb = od.OrederOperation(mb.ToList());
                     //导出

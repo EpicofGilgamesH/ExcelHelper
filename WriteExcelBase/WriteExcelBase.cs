@@ -134,15 +134,77 @@ namespace WriteExcelBase
             row.CreateCell(4).SetCellValue(dm.Agent);
             row.CreateCell(5).SetCellValue(dm.AgentTel);
             row.CreateCell(6).SetCellValue(TradeTypeToString(dm.TradeType));
-            row.CreateCell(7).SetCellValue(dm.DistributableAchievement);
+            string achieve = GetAchievement(dm.DistributableAchievement);
+            row.CreateCell(7).SetCellValue(achieve);
             ICell dateCell = row.CreateCell(8);
             dateCell.SetCellValue(dm.TradeDate.ToString("yyyy-MM-dd"));
             //dateCell.SetCellValue(dm.TradeDate.ToString("yyyy-MM-dd")); 时间格式不便于筛选
             //dateCell.CellStyle = style;
             row.CreateCell(9).SetCellValue(dm.No);
             row.CreateCell(10).SetCellValue(dm.IsCoilInTimeRight);
+            string description = string.Empty;
+            row.CreateCell(11).SetCellValue(CustomerSource(dm, achieve, out description));
+            row.CreateCell(12).SetCellValue(description);
             return row;
         }
+
+        /// <summary>
+        /// 获得 客户来源 字段
+        /// </summary>
+        /// <param name="dm"></param>
+        /// <returns></returns>
+        public static string CustomerSource(DefalutModel dm, string achieve, out string description)
+        {
+            string customerSource = string.Empty;
+            if (dm.IsCoilInTimeRight.ToUpper() == "YES")
+            {
+                customerSource = "进线";
+            }
+            if (dm.IsOrderTimeRight.ToUpper() == "YES")
+            {
+                if (string.IsNullOrEmpty(customerSource))
+                {
+                    customerSource = "预约";
+                }
+            }
+            if (dm.IsQQTalkTimeRight.ToUpper() == "YES")
+            {
+                if (string.IsNullOrEmpty(customerSource))
+                {
+                    customerSource = "Q聊";
+                }
+            }
+            description = dm.Store + dm.Agent + achieve;
+            return customerSource;
+        }
+
+        /// <summary>
+        /// 获取描述信息和成交方式
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        public static string GetAchievement(double d)
+        {
+            string achievement = string.Empty;
+            if (d >= 10000)
+            {
+                achievement = Math.Round(d / 10000, 2).ToString() + "万元";
+            }
+            else if (d > 5000 && d < 10000)
+            {
+                achievement = "近万元";
+            }
+            else if (d == 5000)
+            {
+                achievement = "半万元";
+            }
+            else if (d < 5000)
+            {
+                achievement = "NNN万元";
+            }
+            return achievement;
+        }
+
 
         public static string TradeTypeToString(TradeTypeEnum tte)
         {

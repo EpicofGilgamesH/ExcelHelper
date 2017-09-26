@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PjzNrYrvM4JfNMp1B2BKvwdZNPTinarmS4D3R+1FKiE=</dsig:DigestValue>
+        <dsig:DigestValue>UZQPSfYg1MQNlQCIykekP1rIJMZz4t9gM3xAF25Rzt8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Model.dll" size="11264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Model.dll" size="11776">
       <assemblyIdentity name="Model" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>daPXk6pvD48+CYxdfCJPL/AQlp8c7mt0n6lAHo7LvYg=</dsig:DigestValue>
+        <dsig:DigestValue>SB/1fqKtPDgUEqeGKfAzn7fiC6UFoxzkzQRYuBWv3Lk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Operation.dll" size="9728">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Operation.dll" size="11264">
       <assemblyIdentity name="Operation" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dDfdtqoKjxUN2sz5BRzhgs9w6gGWl6swzyktVR9qRWY=</dsig:DigestValue>
+        <dsig:DigestValue>2S9o7m/2pvJxzqPPYmmuYvPENGUStdePuYQ85p9HzdM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -146,19 +146,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>eCBLQa/FJ/EsU4XcnzYhW4sh03GXoQMyxSNlqJStbJQ=</dsig:DigestValue>
+        <dsig:DigestValue>iqjRoOhi3/S7TzgoOC+dAxPUfjnl6SabveJHQZ3tBN8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WriteExcelBase.dll" size="11776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WriteExcelBase.dll" size="12800">
       <assemblyIdentity name="WriteExcelBase" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PPBGSTCZdEdtH08wX6yskQg7rtluL5nJwwF8ArQwzYY=</dsig:DigestValue>
+        <dsig:DigestValue>/Mhws5bu/vtgZe9IUqKAcqu/SKAsS8GCuclblx7Yxh4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

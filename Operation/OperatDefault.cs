@@ -25,6 +25,57 @@ namespace Operation
         }
 
         /// <summary>
+        /// 深圳区城市名分类
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        public IEnumerable<ModelBase> GetExactCity(IList<ModelBase> list)
+        {
+            IList<DefalutModel> listdm = list.Select(x => (DefalutModel)x).ToList();
+            foreach (var item in listdm)
+            {
+                switch (item.Area)
+                {
+                    case "布吉区":
+                    case "福田北区":
+                    case "福田南区":
+                    case "华侨城区":
+                    case "龙坂区":
+                    case "南山后海区":
+                    case "南山前海区":
+                    case "商业部":
+                        item.City = "深圳中";
+                        break;
+                    case "宝安A区":
+                    case "宝安B区":
+                    case "宝安C区":
+                    case "宝安D区":
+                    case "宝安E区":
+                    case "东莞A区":
+                    case "东莞B区":
+                    case "东莞C区":
+                    case "新房集销中心区":
+                        item.City = "深圳西";
+                        break;
+                    case "惠阳大亚湾区":
+                    case "龙岗一区":
+                    case "龙岗二区":
+                    case "罗湖西区":
+                    case "罗湖中区":
+                    case "盐莲区":
+                    case "坪山区":
+                        item.City = "深圳东";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            return listdm;
+        }
+
+
+
+        /// <summary>
         /// 根据条件筛选
         /// </summary>
         /// <param name="list"></param>
