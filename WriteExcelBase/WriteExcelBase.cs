@@ -174,7 +174,14 @@ namespace WriteExcelBase
                     customerSource = "Q聊";
                 }
             }
-            description = dm.Store + dm.Agent + achieve;
+            if (!string.IsNullOrEmpty(customerSource))
+            {
+                description = dm.Store + dm.Agent + achieve;
+            }
+            else
+            {
+                description = string.Empty;
+            }
             return customerSource;
         }
 

@@ -87,13 +87,14 @@ namespace Operation
             IList<DefalutModel> listdm = list.Select(x => (DefalutModel)x).ToList();
             foreach (DefalutModel dm in listdm)
             {
-                if (dm.CustomerInDate != default(DateTime))
-                {
-                    if (dm.TradeDate.Date > dm.CustomerInDate.Date) //进线>成交的去掉
-                        fbclist.Add(dm);
-                    else if (dm.TradeDate.Date == dm.CustomerInDate.Date && dm.TradeType == TradeTypeEnum.RENT) //进线=成交 只保留租
-                        fbclist.Add(dm);
-                }
+                if (dm.TradeDate.Date > dm.CustomerInDate.Date) //进线>成交的去掉
+                    fbclist.Add(dm);
+                else if (dm.TradeDate.Date > dm.OrderTime.Date)
+                    fbclist.Add(dm);
+                else if (dm.TradeDate.Date > dm.QQTalkTime.Date)
+                    fbclist.Add(dm);
+                else if (dm.TradeDate.Date == dm.CustomerInDate.Date && dm.TradeType == TradeTypeEnum.RENT) //进线=成交 只保留租
+                    fbclist.Add(dm);
             }
             return fbclist;
         }
