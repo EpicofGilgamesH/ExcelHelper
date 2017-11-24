@@ -24,3 +24,4 @@ E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\bin\Debug\NPOI.xml
 E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\obj\Debug\WriteExcelBase.csprojResolveAssemblyReference.cache
 E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\obj\Debug\WriteExcelBase.dll
 E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\obj\Debug\WriteExcelBase.pdb
+E:\PersonalDemo\ExcelHelper\ExcelHelper\WriteExcelBase\obj\Debug\WriteExcelBase.csproj.CoreCompileInputs.cache
