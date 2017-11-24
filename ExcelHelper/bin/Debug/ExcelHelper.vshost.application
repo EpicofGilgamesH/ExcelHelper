@@ -4,7 +4,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <assemblyIdentity name="ExcelHelper.application" version="1.0.0.28" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
+=======
+  <assemblyIdentity name="ExcelHelper.application" version="1.0.0.25" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
+>>>>>>> parent of f252b81... 3.0细节补�
 =======
   <assemblyIdentity name="ExcelHelper.application" version="1.0.0.25" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
 >>>>>>> parent of f252b81... 3.0细节补�
@@ -30,7 +34,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <assemblyIdentity name="ExcelHelper.exe" version="1.0.0.28" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+=======
+      <assemblyIdentity name="ExcelHelper.exe" version="1.0.0.25" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+>>>>>>> parent of f252b81... 3.0细节补�
 =======
       <assemblyIdentity name="ExcelHelper.exe" version="1.0.0.25" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
 >>>>>>> parent of f252b81... 3.0细节补�
@@ -52,7 +60,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <dsig:DigestValue>OzLKU3yn7uI7Pa9O2FgCYHO5mvPKzmTP6CPW3hwdZLc=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>fgPlwQ+O0CzeDCtJJas3si78110SJDPXUC2P07Z5Sjg=</dsig:DigestValue>
+>>>>>>> parent of f252b81... 3.0细节补�
 =======
         <dsig:DigestValue>fgPlwQ+O0CzeDCtJJas3si78110SJDPXUC2P07Z5Sjg=</dsig:DigestValue>
 >>>>>>> parent of f252b81... 3.0细节补�

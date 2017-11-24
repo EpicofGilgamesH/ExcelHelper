@@ -198,6 +198,7 @@ namespace WriteExcelBase
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!string.IsNullOrEmpty(customerSource))
             {
                 description = string.Format("{0} 【{1}】喜签{2}单收佣{3}", dm.Store, dm.Agent, tradeType, achieve);
@@ -206,6 +207,9 @@ namespace WriteExcelBase
             {
                 description = string.Empty;
             }
+=======
+            description = dm.Store + dm.Agent + achieve;
+>>>>>>> parent of f252b81... 3.0细节补�
 =======
             description = dm.Store + dm.Agent + achieve;
 >>>>>>> parent of f252b81... 3.0细节补�
