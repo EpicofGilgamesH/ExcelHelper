@@ -68,6 +68,8 @@ namespace WriteExcelBase
 
                         if (dic.Value != null)
                         {
+                            //设置列宽
+                            SetSheetWidth(sheet);
                             //开始将list写入Excel中 1.写标题行 2.写正文
                             IRow tittleRow = sheet.CreateRow(0);
 
@@ -121,6 +123,22 @@ namespace WriteExcelBase
             }
         }
 
+        private static void SetSheetWidth(ISheet sheet)
+        {
+            sheet.SetColumnWidth(0,6 * 256);
+            sheet.SetColumnWidth(1, 10 * 256);
+            sheet.SetColumnWidth(2, 14 * 256);
+            sheet.SetColumnWidth(3, 20 * 256);
+            sheet.SetColumnWidth(4, 8 * 256);
+            sheet.SetColumnWidth(5, 12 * 256);
+            sheet.SetColumnWidth(6, 5 * 256);
+            sheet.SetColumnWidth(7, 6 * 256);
+            sheet.SetColumnWidth(8, 12 * 256);
+            sheet.SetColumnWidth(9, 16 * 256);
+            sheet.SetColumnWidth(10, 8 * 256);
+            sheet.SetColumnWidth(11, 40 * 256);
+        }
+
 
 
         public static IRow DefalutModelExport(ModelBase mb, int i, ISheet sheet)
@@ -133,7 +151,8 @@ namespace WriteExcelBase
             row.CreateCell(3).SetCellValue(dm.Store);
             row.CreateCell(4).SetCellValue(dm.Agent);
             row.CreateCell(5).SetCellValue(dm.AgentTel);
-            row.CreateCell(6).SetCellValue(TradeTypeToString(dm.TradeType));
+            string tradeType = TradeTypeToString(dm.TradeType);
+            row.CreateCell(6).SetCellValue(tradeType);
             string achieve = GetAchievement(dm.DistributableAchievement);
             row.CreateCell(7).SetCellValue(achieve);
             ICell dateCell = row.CreateCell(8);
@@ -141,19 +160,20 @@ namespace WriteExcelBase
             //dateCell.SetCellValue(dm.TradeDate.ToString("yyyy-MM-dd")); 时间格式不便于筛选
             //dateCell.CellStyle = style;
             row.CreateCell(9).SetCellValue(dm.No);
-            row.CreateCell(10).SetCellValue(dm.IsCoilInTimeRight);
+            //20171124 取消进行精准匹配字段
+            //row.CreateCell(10).SetCellValue(dm.IsCoilInTimeRight);
             string description = string.Empty;
-            row.CreateCell(11).SetCellValue(CustomerSource(dm, achieve, out description));
-            row.CreateCell(12).SetCellValue(description);
+            row.CreateCell(10).SetCellValue(CustomerSource(dm, achieve, tradeType, out description));
+            row.CreateCell(11).SetCellValue(description);
             return row;
         }
 
         /// <summary>
         /// 获得 客户来源 字段
         /// </summary>
-        /// <param name="dm"></param>
+        /// <param name="dm">Model</param>
         /// <returns></returns>
-        public static string CustomerSource(DefalutModel dm, string achieve, out string description)
+        public static string CustomerSource(DefalutModel dm, string achieve, string tradeType, out string description)
         {
             string customerSource = string.Empty;
             if (dm.IsCoilInTimeRight.ToUpper() == "YES")
@@ -176,7 +196,7 @@ namespace WriteExcelBase
             }
             if (!string.IsNullOrEmpty(customerSource))
             {
-                description = dm.Store + dm.Agent + achieve;
+                description = string.Format("{0} 【{1}】喜签{2}单收佣{3}", dm.Store, dm.Agent, tradeType, achieve);
             }
             else
             {
@@ -199,15 +219,15 @@ namespace WriteExcelBase
             }
             else if (d > 5000 && d < 10000)
             {
-                achievement = "近万元";
+                achievement = "近万";
             }
             else if (d == 5000)
             {
-                achievement = "半万元";
+                achievement = "半万";
             }
             else if (d < 5000)
             {
-                achievement = "NNN万元";
+                achievement = "NNN千";
             }
             return achievement;
         }
