@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+<<<<<<< HEAD
   <asmv1:assemblyIdentity name="ExcelHelper.exe" version="1.0.0.28" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+=======
+  <asmv1:assemblyIdentity name="ExcelHelper.exe" version="1.0.0.25" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+>>>>>>> parent of f252b81... 3.0细节补�
   <description asmv2:iconFile="ExcelHelper.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -50,7 +54,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>O9/vhNcMM17/bFoQt3MeZ6vVM7ahKWV4YonKSaVMX3M=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>yBw39x0eORI4EW8YNfFqYJgEMSEGaJ5aTIFt/60FiV4=</dsig:DigestValue>
+>>>>>>> parent of f252b81... 3.0细节补�
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +82,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>pxaOPNuhcSoNM/n8Ksgwhpw6kxIkF1e5R5jZXJ2DFrA=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>V4UBK7yLnT0Zm+r4QnQnsXDncX9G8rbiMH84v42by1I=</dsig:DigestValue>
+>>>>>>> parent of f252b81... 3.0细节补�
       </hash>
     </dependentAssembly>
   </dependency>
@@ -134,7 +146,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>sId2AT0sXI+qukTl16BT5GGOsc2LjXgryj7EBjQt5Sw=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>Vf9u27fJnqUWfDsxyNNz+XkHKxYfeOvWHgJZm5Z30bg=</dsig:DigestValue>
+>>>>>>> parent of f252b81... 3.0细节补�
       </hash>
     </dependentAssembly>
   </dependency>
@@ -146,7 +162,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>QEVYt27TPJicSM+NfuNTCZVnUC6872zOpGUMIDYZbFI=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>8SfFB2uy6vq6Mbon7j/4DwPd+cjNuyaZs7GP/0eTcfE=</dsig:DigestValue>
+>>>>>>> parent of f252b81... 3.0细节补�
       </hash>
     </dependentAssembly>
   </dependency>
@@ -158,7 +178,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>y9gGfv9K8VsgFX5vciNmtOBXJcEE9eHuyBXDbkIC9Sc=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>LgQuJ2WvO7UYQgNtOygIVrBBEy9VAc/UHMk5JmwUHxo=</dsig:DigestValue>
+>>>>>>> parent of f252b81... 3.0细节补�
       </hash>
     </dependentAssembly>
   </dependency>

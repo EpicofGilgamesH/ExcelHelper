@@ -61,7 +61,7 @@ namespace ExcelHelper
             }
             catch (Exception ex)
             {
-                msg.Content = "文件格式不对或者被操作的Excel文件未关闭，请联系管理员~ ^^" + ex;
+                msg.Content = "文件格式不对，请联系管理员~ ^^" + ex;
             }
             //IList<DefalutModel> list = reb.List as IList<DefalutModel>;
             //string[] tittle = new string[13] { "城市", "区域", "片区", "店铺", "经纪人", "经纪人号码", "成交类型", "总佣金", "成交时间", "交易编号", "进线精准匹配", "客户来源", "文本" };
@@ -72,8 +72,10 @@ namespace ExcelHelper
             {
                 WriteExcelBase.WriteExcelBase web = new WriteExcelBase.WriteExcelBase(filePathPort(_filePath), tittle, colTittle);
                 IList<ModelBase> listmb = reb.List.ToList();
+
                 //对集合进行一些列操作
                 OperatDefault od = new OperatDefault();
+
                 try
                 {
                     //筛选
@@ -101,6 +103,8 @@ namespace ExcelHelper
             {
                 msg.Content = "文件数据为空，请检查月份是否对应~ ^^" + ex;
             }
+
+
         }
 
         protected static string filePathPort(string str)

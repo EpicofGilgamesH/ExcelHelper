@@ -28,7 +28,11 @@
     <MapFileExtensions>true</MapFileExtensions>
     <UpdateUrl>http://localhost/ExcelHelper/</UpdateUrl>
     <AutorunEnabled>true</AutorunEnabled>
+<<<<<<< HEAD
     <ApplicationRevision>28</ApplicationRevision>
+=======
+    <ApplicationRevision>26</ApplicationRevision>
+>>>>>>> parent of f252b81... 3.0细节补�
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
